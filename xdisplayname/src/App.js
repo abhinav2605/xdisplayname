@@ -13,13 +13,13 @@ function submit()
 }
 
   return (
-    <div>
+    <form>
       <h1>Full Name Display</h1>
-      First Name : <input onChange={(e)=>{setFirstname(e.target.value)}} /><br />
-      Last Name : <input onChange={(e)=>{setLastname(e.target.value)}}/><br />
-      <button onClick={submit}>Submit</button>
+      First Name : <input type='text' onChange={(e)=>{setFirstname(e.target.value)}} /><br />
+      Last Name : <input type='text' onChange={(e)=>{setLastname(e.target.value)}}/><br />
+      <button type='submit' onClick={submit}>Submit</button>
       <p>Full name : {fullname}</p>
-    </div>
+    </form>
   );
 }
 
