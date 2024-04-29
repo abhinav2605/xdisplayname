@@ -7,17 +7,18 @@ const [firstname, setFirstname] = useState("");
 const [lastname, setLastname] = useState("");
 const [fullname, setfullname] =useState("");
 
-function submit()
+function submit(e)
 {
-  setfullname(firstname + " " + lastname);
+e.preventDefault();
+setfullname(firstname + " "+ lastname)
 }
 
   return (
-    <form>
+    <form onSubmit={submit}>
       <h1>Full Name Display</h1>
       First Name : <input type='text' onChange={(e)=>{setFirstname(e.target.value)}} /><br />
       Last Name : <input type='text' onChange={(e)=>{setLastname(e.target.value)}}/><br />
-      <button type='submit' onClick={submit}>Submit</button>
+      <button type='submit' >Submit</button>
       <p>Full name : {fullname}</p>
     </form>
   );
