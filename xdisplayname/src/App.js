@@ -10,7 +10,7 @@ const [fullname, setfullname] =useState("");
 function submit(e)
 {
 e.preventDefault();
-setfullname(firstname + " "+ lastname)
+setfullname("Full Name: " +firstname + " "+ lastname)
 }
 
   return (
@@ -19,7 +19,7 @@ setfullname(firstname + " "+ lastname)
       First Name : <input type='text' onChange={(e)=>{setFirstname(e.target.value)}} /><br />
       Last Name : <input type='text' onChange={(e)=>{setLastname(e.target.value)}}/><br />
       <button type='submit' >Submit</button>
-      <p>Full name : {fullname}</p>
+      <p>{fullname}</p>
     </form>
   );
 }
