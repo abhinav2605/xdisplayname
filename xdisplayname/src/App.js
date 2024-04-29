@@ -10,6 +10,8 @@ const [fullname, setfullname] =useState("");
 function submit(e)
 {
 e.preventDefault();
+if(firstname=="" || lastname=="")
+return false;
 setfullname("Full Name: " +firstname + " "+ lastname)
 }
 
